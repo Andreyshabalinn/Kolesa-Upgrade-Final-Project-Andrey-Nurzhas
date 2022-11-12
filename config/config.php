@@ -1,3 +1,3 @@
 <?php
-$dir = 'sqlite:'.__DIR__ . '\..\config\db\services.db';
+$dir = 'sqlite:'.__DIR__ . '\..\services.db';
 ?>
