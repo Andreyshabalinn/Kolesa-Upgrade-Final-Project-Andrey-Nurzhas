@@ -24,7 +24,6 @@ class MessageController
         $repo->create($messageData);
         print_r($messageData);
         die();
-        print_r("hello world");
         return $response->withRedirect('/');
     }
 }

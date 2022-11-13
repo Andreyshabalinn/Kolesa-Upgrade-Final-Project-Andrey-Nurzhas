@@ -15,3 +15,8 @@ create table users
 );
 
 #сюда добавь код для создания таблицы messages
+create table messages
+(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    message varchar(250)
+);
