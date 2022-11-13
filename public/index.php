@@ -5,13 +5,13 @@ use App\Http\Controllers;
 use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
-$dbh  = new PDO($dir) or die("cannot open the database");
+//$dbh  = new PDO($dir) or die("cannot open the database");
 //$query =  "SELECT * FROM users;";
 //foreach ($dbh->query($query) as $row)
 //{
 //    echo $row[0];
 //}
-$dbh = null;
+//$dbh = null;
 
 $twig = Twig::create(__DIR__ . '/../templates', ['cache' => false]);
 $app  = AppFactory::create();
