@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+{% block body %}
+   <div class="msg-container">
+       <h1>Write a message for mailing</h1>
+       <form class="input-container" action="/message" method="post">
+           <textarea class="text" name="text" placeholder="Type something" required></textarea>
+           <div class="banner-submit">
+               <input type="submit" name="submit" value="SUBMIT">
+           </div>
+       </form>
+   </div>
+{% endblock %}

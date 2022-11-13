@@ -2,16 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Slim\Http\ServerRequest;
+use App\Model\Repository\MessageRepository;
 use Slim\Http\Response;
+use Slim\Http\ServerRequest;
 use Slim\Views\Twig;
-
 
 class MessageController
 {
-    public function home(ServerRequest $request, Response $response)
+    public function viewMessage(ServerRequest $request, Response $response)
     {
         $view = Twig::fromRequest($request);
-        return $view->render($response, 'home.twig', ['name' => 'guest']);
+        print_r("hello");
+        return $view->render($response, 'newMessage.twig');
+    }
+
+    public function newMessage(ServerRequest $request,Response $response)
+    {
+        $repo = new MessageRepository();
+        $messageData = $request->getParsedBodyParam('text');
+        $response->getBody()->write($messageData);
+        $repo->view($messageData);
+        print_r($messageData . "\n");
+        print_r("hello world");
+        return $response->withRedirect('/');
     }
 }
