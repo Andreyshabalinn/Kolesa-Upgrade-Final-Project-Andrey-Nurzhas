@@ -9,8 +9,8 @@ class Message
 
     public function __construct($data=[])
     {
-        $this->id=$data['id'] ?? nul;
-        $this->message=$data['message'] ?? null;
+        $this->id=$data['id'] ?? null;
+        $this->message=$data['text'] ?? null;
     }
 
     public function getId():?int
