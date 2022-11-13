@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Model\Repository\MessageRepository;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 use Slim\Views\Twig;
+use PDO;
 
 class MessageController
 {
@@ -19,10 +19,11 @@ class MessageController
     public function newMessage(ServerRequest $request,Response $response)
     {
         $repo = new MessageRepository();
-        $messageData = $request->getParsedBodyParam('text');
-        $response->getBody()->write($messageData);
-        $repo->view($messageData);
-        print_r($messageData . "\n");
+        $messageData = $request->getParsedBody();
+        print_r($messageData);
+        $repo->create($messageData);
+        print_r($messageData);
+        die();
         print_r("hello world");
         return $response->withRedirect('/');
     }
