@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 include(__DIR__ .'\..\config\config.php');
+
 use App\Http\Controllers;
 use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
@@ -18,6 +19,9 @@ $app  = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
 $app->add(TwigMiddleware::create($app, $twig));
 
-$app->get('/', Controllers\MessageController::class . ':home');
+$app->get('/', Controllers\IndexController::class . ':home');
+$app->get('/message', Controllers\MessageController::class . ':viewMessage');
+$app->post('/message', Controllers\MessageController::class . ':newMessage');
+
 
 $app->run();
