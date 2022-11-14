@@ -13,7 +13,7 @@
         "slim/twig-view": "^3.3",
         "doctrine/migrations": "^3.5",
         "doctrine/orm":"^2.4",
-        "doctrine/cache": "^1.11"
-
+        "doctrine/cache": "^1.11",
+        "ext-pdo": "*"
     }
 }
