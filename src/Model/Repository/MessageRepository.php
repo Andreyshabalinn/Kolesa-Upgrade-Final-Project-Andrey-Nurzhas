@@ -29,9 +29,7 @@ class MessageRepository extends PDO
         $increment = array_key_last($db) + 1;
         $messageData['id'] = $increment;
         $db[$increment] = $messageData;
-//        print_r($messageData);
-//        die();
-//        $this->saveDB($db, $increment);
+        $this->saveDB($db, $increment);
 
         return new Message($messageData);
     }
@@ -45,7 +43,7 @@ class MessageRepository extends PDO
     public function saveDB(array $data, $increment): void
     {
         $stmt = $this->prepare('insert into messages (message) values (?)');
-        $stmt->execute(array($data[$increment]['message']['text']));
+        $stmt->execute(array($data[$increment]['text']));
     }
 }
 

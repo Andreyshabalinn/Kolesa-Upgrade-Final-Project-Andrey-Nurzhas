@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
-include(__DIR__ .'\..\config\config.php');
 
 use App\Http\Controllers;
 use Slim\Factory\AppFactory;
