@@ -35,7 +35,6 @@ class MessageController
         $result = file_get_contents($url, false, $context);
         if ($result === FALSE) { /* Handle error */ }
 
-        var_dump($result);
         return $response->withRedirect('/');
     }
 }
