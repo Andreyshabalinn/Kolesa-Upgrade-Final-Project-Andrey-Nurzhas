@@ -17,10 +17,9 @@
 $ composer install
 ```
 
-## Разработка
 
 ### Требования
-Для установки и запуска проекта, необходим [MySQL](https://www.mysql.com/)
+Для работы БД, необходим [MySQL](https://www.mysql.com/)
 
 ### Создание БД и таблиц
 После установки MySQL запустите скрипт в директории config/createdb.sql , Скрипт создаст нужные таблицы
@@ -35,6 +34,3 @@ cd public/ && php -S localhost:8000
 
 - [Andrey Shabalin](https://github.com/Andreyshabalinn)
 - [Nurzhas Kanatov](https://github.com/kanatovnurzhas)
-
-## Источники
-Если вы чем-то вдохновлялись, расскажите об этом: где брали идеи, какие туториалы смотрели, ссылки на исходники кода. 
