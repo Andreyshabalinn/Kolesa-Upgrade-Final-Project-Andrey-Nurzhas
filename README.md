@@ -1,3 +1,36 @@
-# Kolesa-Upgrade-Final-Project-Andrey-Nurzhas
+# Название проекта
+Простой сервис на PHP для отправки сообщения в другой сервис
+## Содержание
+- [Технологии](#технологии)
+- [Начало работы](#начало-работы)
+- [Команда проекта](#команда-проекта)
 
-# Здесь будет описание и инструкция по развертыванию
+## Технологии
+- [PHP](https://www.php.net/)
+- [Twig](https://twig.symfony.com/)
+- [Doctrine](https://www.doctrine-project.org/)
+- [MySQL](https://www.mysql.com/)
+
+## Использование
+Для того чтобы запустить сервер установите нужные библиотеки:
+```sh
+$ composer install
+```
+
+
+### Требования
+Для работы БД, необходим [MySQL](https://www.mysql.com/)
+
+### Создание БД и таблиц
+После установки MySQL запустите скрипт в директории config/createdb.sql , Скрипт создаст нужные таблицы
+
+### Запуск сервера
+Чтобы запустить сервер выполните команду:
+```sh
+cd public/ && php -S localhost:8000
+```
+
+## Команда проекта
+
+- [Andrey Shabalin](https://github.com/Andreyshabalinn)
+- [Nurzhas Kanatov](https://github.com/kanatovnurzhas)

@@ -11,7 +11,7 @@ class MessageRepository extends PDO
         $host = 'localhost';
         $db = 'Services';
         $user = 'root';
-        $pass = 'Applejesus1';
+        $pass = '2001';
         $charset = 'utf8';
         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
         $opt = [
