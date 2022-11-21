@@ -33,3 +33,4 @@ cd public/ && php -S localhost:8000
 
 - [Andrey Shabalin](https://github.com/Andreyshabalinn)
 - [Nurzhas Kanatov](https://github.com/kanatovnurzhas)
+

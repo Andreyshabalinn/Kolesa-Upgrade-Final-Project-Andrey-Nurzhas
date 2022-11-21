@@ -21,14 +21,14 @@ class MessageController
         $repo = new MessageRepository();
         $messageData = $request->getParsedBodyParam('message');
         $repo->create($messageData);
-        $url = 'http://localhost:8080/message';
-        $arr = array('message' =>$messageData['text']);
-        $msgJson = json_encode($arr);
+        print_r($messageData);
+        $url = 'http://localhost:8080/';
+        $data = $messageData;
         $options = array(
             'http' => array(
                 'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
                 'method'  => 'POST',
-                'content' => $msgJson,
+                'content' => http_build_query($data)
             )
         );
         $context  = stream_context_create($options);
