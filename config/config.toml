@@ -1,0 +1,8 @@
+[database]
+db_host='localhost'
+db_name='news'
+db_user='root'
+db_password='2001'
+
+[url]
+url='http://localhost:8080/'
