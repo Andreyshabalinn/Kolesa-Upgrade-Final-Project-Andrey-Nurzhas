@@ -3,7 +3,6 @@
 namespace App\Model\Repository;
 
 use App\Model\Entity\Message;
-use App\Repository\Database\Database;
 use PDO;
 class MessageRepository
 {
@@ -11,9 +10,9 @@ class MessageRepository
     private \PDO $connection;
 
 
-    public function __construct()
+    public function __construct(PDO $connection)
     {
-        $this->connection =  Database::getConnection()->getPdo();
+        $this->connection =  $connection;
     }
 
     public function create(array $messageData): Message

@@ -17,10 +17,22 @@ class MessageController
 
     public function newMessage(ServerRequest $request,Response $response)
     {
-        $repo = new MessageRepository();
+        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+
+        $dbhost = $_ENV['DBHOST'];
+        $dbname = $_ENV['DBNAME'];
+        $dbuser = $_ENV['DBUSER'];
+        $dbpassword = $_ENV['DBPASSWORD'];
+
+        $dsn = sprintf('mysql:host=%s;dbname=%s',$dbhost,$dbname);
+        $connection = new \PDO($dsn,$dbuser,$dbpassword);
+
+
+        $repo = new MessageRepository($connection);
         $messageData = $request->getParsedBodyParam('message');
         $repo->create($messageData);
-        $url = 'http://localhost:8080/';
+        $url = $_ENV['URL'];
         $data = $messageData;
         $options = [
             'http' => [
