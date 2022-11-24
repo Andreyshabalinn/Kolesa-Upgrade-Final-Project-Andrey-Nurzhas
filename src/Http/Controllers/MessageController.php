@@ -45,6 +45,6 @@ class MessageController
         if ($result === FALSE) { /* Handle error */ }
 
         var_dump($result);
-        return $response->withRedirect('/');
+        return $response->withRedirect('/message');
     }
 }
