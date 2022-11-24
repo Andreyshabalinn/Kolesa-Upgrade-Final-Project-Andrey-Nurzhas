@@ -14,6 +14,8 @@
         "doctrine/migrations": "^3.5",
         "doctrine/orm":"^2.4",
         "doctrine/cache": "^1.11",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "yosymfony/toml": "^1.0",
+        "vlucas/phpdotenv": "^5.5"
     }
 }
