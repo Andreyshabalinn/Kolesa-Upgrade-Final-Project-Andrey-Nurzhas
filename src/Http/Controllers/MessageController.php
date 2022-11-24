@@ -11,7 +11,6 @@ class MessageController
     public function viewMessage(ServerRequest $request, Response $response)
     {
         $view = Twig::fromRequest($request);
-        print_r("hello");
         return $view->render($response, 'newMessage.twig');
     }
 
